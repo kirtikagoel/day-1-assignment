@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Fest Registration</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      vertical-align: top;
+    }
+    label {
+      margin-right: 15px;
+      display: inline-block;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tech Fest Registration Form</h1>
+  <h5>Please fill in your details below</h5>
+
+  <form method="post">
+    <table>
+      <tr>
+        <th><label for="name">Name:</label></th>
+        <td><input type="text" id="name" name="name" required /></td>
+      </tr>
+      <tr>
+        <th><label for="age">Age:</label></th>
+        <td><input type="number" id="age" name="age" min="10" max="100" required /></td>
+      </tr>
+      <tr>
+        <th><label for="department">Department:</label></th>
+        <td>
+          <select id="department" name="department" required>
+            <option value="">--Select--</option>
+            <option value="cse">Computer Science</option>
+            <option value="ece">Electronics</option>
+            <option value="mech">Mechanical</option>
+            <option value="civil">Civil</option>
+            <option value="bio">Biotechnology</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>Gender:</th>
+        <td>
+          <label><input type="radio" name="gender" value="male" required /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+        </td>
+      </tr>
+      <tr>
+        <th>Skills:</th>
+        <td>
+          <label><input type="checkbox" name="skills[]" value="html" /> HTML</label>
+          <label><input type="checkbox" name="skills[]" value="css" /> CSS</label>
+          <label><input type="checkbox" name="skills[]" value="javascript" /> JavaScript</label>
+          <label><input type="checkbox" name="skills[]" value="react" /> React</label>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="comments">Why do you want to join?</label></th>
+        <td>
+          <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Your reason..." required></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <button type="submit">Submit Registration</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>
